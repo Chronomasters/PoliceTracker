@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PoliceTracker</string>
+    <string name="main_page_nav">Welcome! Choose what type of Law Enforcement you are involved with</string>
+    <string name="police">Police</string>
+    <string name="firemen">Firemen</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="dispatch">Dispatch</string>
+    <string name="login">User Login</string>
+    <string name="email">Enter your email</string>
+    <string name="password">Enter your password</string>
+    <string name="loginButton">Login</string>
+    <string name="register">Don\'t have an account? Register Here</string>
+    <string name="forgotPassword">Forgot Password</string>
+
+</resources>
+

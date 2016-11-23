@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "187341176465",
+    "firebase_url": "https://policetracking-281ef.firebaseio.com",
+    "project_id": "policetracking-281ef",
+    "storage_bucket": "policetracking-281ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187341176465:android:59f8213ecabee556",
+        "android_client_info": {
+          "package_name": "com.example.android.policetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187341176465-2e88n5gv17blsqehb3rdp9ompjmmeacm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.policetracker",
+            "certificate_hash": "157E49B95E1AEC5877BD986C42CB8ECEB7504715"
+          }
+        },
+        {
+          "client_id": "187341176465-rf8e4s02lvqk453c46u4u8k539mcbtcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcB4AQ794-S97KY_KeD4eyqaA77jJ5wsU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187341176465-rf8e4s02lvqk453c46u4u8k539mcbtcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
