@@ -12,10 +12,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button dispatch;
     private Button firemen;
     private Button ambulance;
-    private boolean pFlag = false;
-    private boolean dFlag = false;
-    private boolean fFlag = false;
-    private boolean aFlag = false;
+
+    public static boolean pFlag = false;
+    public static boolean dFlag = false;
+    public static boolean fFlag = false;
+    public static boolean aFlag = false;
 
 
     @Override
@@ -32,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dispatch.setOnClickListener(this);
         firemen.setOnClickListener(this);
         ambulance.setOnClickListener(this);
+
+
+
 
     }
 

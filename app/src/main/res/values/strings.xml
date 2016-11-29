@@ -11,6 +11,16 @@
     <string name="loginButton">Login</string>
     <string name="register">Don\'t have an account? Register Here</string>
     <string name="forgotPassword">Forgot Password</string>
+    <string name="registerTitle"> User Registration</string>
+    <string name="registerButton">Register</string>
+    <string name="signIn">Already Registered? Sign in here</string>
+    <string name="registerPassword">Enter your password again</string>
 
+    <string-array name="choice">
+        <item>Current Department:</item>
+        <item>Fire Department</item>
+        <item>Police</item>
+        <item>Ambulance</item>
+        <item>Dispatch</item>
+    </string-array>
 </resources>
-

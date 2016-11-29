@@ -17,7 +17,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import static com.example.android.policetracker.MainActivity.aFlag;
+import static com.example.android.policetracker.MainActivity.dFlag;
+import static com.example.android.policetracker.MainActivity.fFlag;
+import static com.example.android.policetracker.MainActivity.pFlag;
+
 public class Login extends AppCompatActivity implements View.OnClickListener {
+
     private EditText editTextEmail;
     private EditText editTextPassword;
     private Button buttonLogin;
@@ -25,6 +31,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private ProgressDialog progressDialog;
     public static FirebaseAuth firebaseAuth;
     private TextView textViewForgotPassword;
+    private TextView goBack;
+    private TextView enforcement;
 
     public static String username;
 
@@ -38,6 +46,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         textViewSignUp = (TextView) findViewById(R.id.textViewSignUp);
         textViewForgotPassword = (TextView) findViewById(R.id.textViewForgotPassword);
+        goBack = (TextView) findViewById(R.id.back);
+        enforcement = (TextView) findViewById(R.id.enforcementLogin);
 
 
         progressDialog = new ProgressDialog(this);
@@ -47,9 +57,28 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         buttonLogin.setOnClickListener(this);
         textViewSignUp.setOnClickListener(this);
         textViewForgotPassword.setOnClickListener(this);
+        goBack.setOnClickListener(this);
 
-        if (firebaseAuth.getCurrentUser() != null) {
-            startActivity(new Intent(this, Police.class));
+
+
+        if (aFlag) {
+            goBack.setText("Not an Ambulance? Click Here");
+            enforcement.setText("Ambulance Login");
+        }
+
+        if (dFlag) {
+            goBack.setText("Not part of Dispatch? Click Here");
+            enforcement.setText("Dispatch Login");
+        }
+
+        if (pFlag) {
+            goBack.setText("Not a Police Officer? Click Here");
+            enforcement.setText("Police Login");
+        }
+
+        if (fFlag) {
+            goBack.setText("Not a Fireman? Click Here");
+            enforcement.setText("Firemen Login");
         }
 
     }
@@ -57,11 +86,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private void userLogin() {
         final String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
-
-        if(!email.contains("@frhsd.com")) {
-            Toast.makeText(this, "That is an invalid email please use FRHSD emails only", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
 
         if(TextUtils.isEmpty(email)) {
@@ -102,6 +126,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        if (v == goBack) {
+            aFlag = false;
+            dFlag = false;
+            pFlag = false;
+            fFlag = false;
+
+            startActivity(new Intent(this, MainActivity.class));
+        }
+
         if(v == buttonLogin) {
             userLogin();
         }
